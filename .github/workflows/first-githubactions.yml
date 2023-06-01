@@ -1,0 +1,9 @@
+name: Run Shell Commands #A name to our github actions file
+on: [push]  #this tells github when we want to execute this workflow --> as soon as we commit this workflow this ill execute 
+
+jobs:  # key word to define the 
+  run-shell-command: # name of our action --> we want to run some shell command
+    runs-on: ubuntu-latest # where we want to run our shell command --> the command will run on ubuntu, a machine provided by github
+    steps: # use steps key work to define the name of command we want to to run and then the acctual command 
+      - name: Echo a String # --> provide name of command 
+        run: echo "Hello peoples! This is our first GitHub Actions Workflow file" # telling github to run the echo command and pass test to the echo command 
